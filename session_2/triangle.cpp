@@ -1,6 +1,4 @@
-#include "figure.h"
-
-//triangle
+#include "triangle.h"
 
 triangle::triangle() { a = 1; b = 1; c = 1; }
 triangle::triangle(ld x, ld y, ld z)
@@ -62,64 +60,3 @@ ld triangle::square()
 	ld p = (a + b + c) / 2;
 	return sqrt(p * (p - a) * (p - b) * (p - c));
 }
-
-//rectangle
-
-rectangle::rectangle() { a = 1; b = 1; }
-rectangle::rectangle(ld x, ld y)
-{
-	try
-	{
-		if (x <= 0 || y <= 0) throw "side cannot be negative";
-		else { a = x; b = y; }
-	}
-	catch (const char* error) { cout << error << endl; a = 1; b = 1; }
-}
-
-void rectangle::set_a(ld x)
-{
-	try
-	{
-		if (x <= 0) throw "side cannot be negative";
-		a = x;
-	}
-	catch (const char* error) { cout << error << endl; }
-}
-void rectangle::set_b(ld x)
-{
-	try
-	{
-		if (x <= 0) throw "side cannot be negative";
-		b = x;
-	}
-	catch (const char* error) { cout << error << endl; }
-}
-
-ld rectangle::perimetr() { return 2 * (a + b); }
-ld rectangle::square() { return a * b; }
-
-//circle
-
-circle::circle() { r = 1; }
-circle::circle(ld x)
-{
-	try
-	{
-		if (x <= 0) throw "side cannot be negative";
-		else r = x;
-	}
-	catch (const char* error) { cout << error << endl; r = 1; }
-}
-
-void circle::set_r(ld x)
-{
-	try
-	{
-		if (x <= 0) throw "side cannot be negative";
-		else r = x;
-	}
-	catch (const char* error) { cout << error << endl; }
-}
-
-ld circle::perimetr() { return 2 * acos(-1) * r; }
-ld circle::square() { return acos(-1) * r * r; }

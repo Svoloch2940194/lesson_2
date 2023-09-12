@@ -1,4 +1,6 @@
 ﻿  Source.cpp
-  src.cpp
+  circle.cpp
+  rectangle.cpp
+  triangle.cpp
   Создание кода...
   session_2.vcxproj -> C:\Users\Volochaeva Natalia\source\repos\session_2\x64\Debug\session_2.exe
