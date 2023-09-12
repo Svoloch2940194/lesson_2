@@ -5,20 +5,20 @@ circle::circle(ld x)
 {
 	try
 	{
-		if (x <= 0) throw "side cannot be negative";
+		if (x <= 0) { error er(1); throw er; }
 		else r = x;
 	}
-	catch (const char* error) { cout << error << endl; r = 1; }
+	catch (error er) { er.print(); r = 1; }
 }
 
 void circle::set_r(ld x)
 {
 	try
 	{
-		if (x <= 0) throw "side cannot be negative";
+		if (x <= 0) { error er(1); throw er; }
 		else r = x;
 	}
-	catch (const char* error) { cout << error << endl; }
+	catch (error er) { er.print(); }
 }
 
 ld circle::perimetr() { return 2 * acos(-1) * r; }

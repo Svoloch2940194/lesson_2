@@ -1,5 +1,6 @@
 #pragma once
 #include "head.h"
+#include "error.h"
 
 class figure
 {
